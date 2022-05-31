@@ -8,6 +8,7 @@ public class Word extends CheckableText {
   }
 
   // check the word
+  @Override
   public boolean check(Database database) {
     if(database.checkWord(this.text)) {
       return true;
@@ -16,6 +17,7 @@ public class Word extends CheckableText {
   }
 
   // return the length
+  @Override
   public int length() {
     return this.text.length();
   }

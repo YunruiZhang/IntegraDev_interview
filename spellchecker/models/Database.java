@@ -12,13 +12,14 @@ import java.io.*;
 import java.util.UUID;
 
 public class Database {
-  public Connection connection;
+  private Connection connection;
 
   public boolean createTable() {
     /**
      * Create the table for the database, if it doesn't already exist
      */
 
+    // as we are not doing range select we can screate index using hash instead of the default b tree.
     ArrayList<String> queryArray = new ArrayList<String>();
     queryArray.add("create table if not exists words (");
     queryArray.add("id varchar(36) NOT NULL, ");

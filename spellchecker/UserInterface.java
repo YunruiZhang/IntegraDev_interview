@@ -43,6 +43,7 @@ class UserInterface extends Thread {
     return window;
   }
 
+  @Override
   public void run() {
     this.createWindow();
   }
